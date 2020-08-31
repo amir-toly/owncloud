@@ -3430,6 +3430,15 @@ trait WebDav {
 				HttpRequestHelper::parseResponseAsXml($this->response)
 			);
 		}
+		Assert::assertIsArray(
+			$this->responseXml,
+			__METHOD__ . " responseXml is not an array"
+		);
+		Assert::assertArrayHasKey(
+			"value",
+			$this->responseXml,
+			__METHOD__ . " responseXml does not have key 'value'"
+		);
 		$multistatusResults = $this->responseXml["value"];
 		if ($multistatusResults === null) {
 			$multistatusResults = [];
@@ -3547,6 +3556,15 @@ trait WebDav {
 		// topWebDavPath should be something like /remote.php/webdav/ or
 		// /remote.php/dav/files/alice/
 		$topWebDavPath = "/" . $this->getFullDavFilesPath($user) . "/";
+		Assert::assertIsArray(
+			$this->responseXml,
+			__METHOD__ . " responseXml for user $user is not an array"
+		);
+		Assert::assertArrayHasKey(
+			"value",
+			$this->responseXml,
+			__METHOD__ . " responseXml for user $user does not have key 'value'"
+		);
 		$multistatusResults = $this->responseXml["value"];
 		$results = [];
 		if ($multistatusResults !== null) {
