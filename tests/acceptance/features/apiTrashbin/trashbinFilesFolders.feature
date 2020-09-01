@@ -104,7 +104,7 @@ Feature: files and folders exist in the trashbin after being deleted
 #      | old      |
 #      | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   # This scenario deletes many files as close together in time as the test can run.
   # On a very slow system, the file deletes might all happen in different seconds.
   # But on "reasonable" systems, some of the files will be deleted in the same second,
@@ -126,17 +126,17 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
     # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
-    #Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
-    #And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
-    #And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
-    #And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -153,13 +153,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -176,13 +181,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -199,13 +209,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -222,13 +237,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -245,13 +265,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -268,13 +293,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -291,13 +321,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -314,13 +349,18 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
 
-  @issue-23151
+  @skipOnOcV10 @issue-23151
   Scenario Outline: trashbin can store two files with the same name but different origins when the files are deleted close together in time
     Given using <dav-path> DAV path
     And user "Alice" has created folder "/folderA"
@@ -337,12 +377,17 @@ Feature: files and folders exist in the trashbin after being deleted
       | /folderB/textfile0.txt |
       | /folderC/textfile0.txt |
       | /folderD/textfile0.txt |
+    # When issue-23151 is fixed, uncomment these lines. They should pass reliably.
+    Then as "Alice" the folder with original path "/folderA/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderB/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderC/textfile0.txt" should exist in the trashbin
+    And as "Alice" the folder with original path "/folderD/textfile0.txt" should exist in the trashbin
     And as "Alice" the folder with original path "/textfile0.txt" should exist in the trashbin
     Examples:
       | dav-path |
       | old      |
       | new      |
-
+  
   # Note: the underlying acceptance test code ensures that each delete step is separated by a least 1 second
 #  Scenario Outline: trashbin can store two files with the same name but different origins when the deletes are separated by at least 1 second
 #    Given using <dav-path> DAV path
