@@ -3538,6 +3538,7 @@ trait WebDav {
 				HttpRequestHelper::parseResponseAsXml($this->response)
 			);
 		}
+		Assert::assertNotEmpty($this->responseXml, 'Response is empty');
 		if ($user === null) {
 			$user = $this->getCurrentUser();
 		}
